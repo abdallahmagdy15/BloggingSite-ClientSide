@@ -1,0 +1,32 @@
+.container{
+  margin: 2rem 4rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--shade-smoke);
+}
+.authorDp{
+  width: 2rem;
+  height: 2rem;
+  margin-right: 7px;
+}
+.btn{
+  padding-left: 0;
+}
+.title {
+  color: var(--shade-dark);
+  font-size: 2rem;
+  cursor: pointer;
+}
+.title:hover{
+  text-decoration: underline 3px var(--shade-smoke);
+}
+.counter{
+  color: var(--shade-grey);
+  cursor: pointer;
+}
+
+fa-icon{
+  font-size: 1.2em;
+}
+.authorName{
+  font-size: 1.2em;
+}

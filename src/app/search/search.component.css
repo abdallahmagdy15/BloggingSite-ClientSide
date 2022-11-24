@@ -1,0 +1,11 @@
+.img-responsive {
+    display: block;
+    margin: 0 auto;
+}
+
+.noResults {
+    width: 100%;
+}
+.content{
+    padding-top: 2rem;
+}

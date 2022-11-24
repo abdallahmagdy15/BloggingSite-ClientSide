@@ -1,0 +1,12 @@
+<div class="commentCard">
+    <div class="btn d-inline">
+        <img class="authorDp img-responsive" [src]="(comment.authorDp)?comment.authorDp:'../assets/male_dp.jpg'">
+        <a class="btn authorName" [routerLink]="['/author/'+comment.author]">{{comment.authorName}} •
+            {{comment.updatedAt |
+            date}} </a>
+    </div>
+
+    <div class="commentBody">
+        <p class="">{{comment.body}}</p>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+.content{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.submit_btn{
+    margin-top: 5rem;
+    width: 100%;
+    display: block;
+    margin:0 auto ;
+    background-color: var(--shade-blue);
+    color: var(--shade-smoke);
+}
+
+.submit_btn:hover{
+    color:white;
+}

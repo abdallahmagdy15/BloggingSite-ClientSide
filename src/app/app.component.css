@@ -1,0 +1,347 @@
+.authorDp {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 1px solid rgb(133, 133, 133);
+}
+
+.content {
+    margin: 8rem 1rem 0;
+    background-color: white;
+}
+
+.text-underline {
+    text-decoration: underline 3px var(--shade-smoke);
+}
+
+.img_rounded {
+    position: relative;
+    margin-left: 10%;
+    width: 80%;
+    /* The size you want */
+}
+
+.img_rounded:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+    /* The padding depends on the width, not on the height, so with a padding-bottom of 100% you will get a square */
+}
+
+.img_rounded img {
+    position: absolute;
+    /* Take your picture out of the flow */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* Make the picture taking the size of it's parent */
+    width: 100%;
+    /* This if for the object-fit */
+    height: 100%;
+    /* This if for the object-fit */
+    object-fit: cover;
+    /* Equivalent of the background-size: cover; of a background-image */
+    object-position: center;
+    border-radius: 10%;
+}
+
+.router-outlet {
+    margin-top: 1%;
+}
+
+:root {
+    --shade-white: #fbfbfb;
+    --shade-smoke: #dfdfdf;
+    --shade-blue: #3398db;
+    --shade-teal: #19bc9c;
+    --shade-green: #2ecc71;
+    --shade-purple: #9b59b6;
+    --shade-grey: #959799;
+    --shade-dark: #202020;
+}
+
+a {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+.btn, .btn-dark {
+    color: var(--shade-grey);
+}
+
+.btn:hover {
+    color: black;
+}
+
+.btn-dark:hover {
+    color: white;
+}
+
+.btn:focus, .btn-dark:focus {
+    border: none;
+    box-shadow: none;
+}
+.invalid-feedback {
+    display: inline !important;
+    float: right;
+    margin-top: -29px;
+    padding-right: 35px;
+    width: auto;
+}
+
+.form-control {
+    background-color: whitesmoke;
+}
+
+.grey {
+    color: var(--shade-grey);
+}
+
+.blue {
+    color: var(--shade-blue);
+}
+
+.dark {
+    color: var(--shade-dark);
+}
+
+.authorDp {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 7px;
+}
+
+.img-responsive {
+    width: inherit;
+}
+
+.b {
+    font-weight: bold;
+}
+
+.dark {
+    color: var(--shade-dark);
+}
+
+.alert {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.rgb-animation  {
+    background: linear-gradient(270deg, #4e5db9, #46b5b3, #50ad7e);
+    background-size: 600% 600%;
+    transition: .3s all;
+    -webkit-animation: AnimationName 11s ease infinite;
+    -moz-animation: AnimationName 11s ease infinite;
+    -o-animation: AnimationName 11s ease infinite;
+    animation: AnimationName 11s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}
+
+.rgb-animation:hover {
+    box-shadow: 0px 2px 3px #3f3f3f;
+    transition: .3s all;
+}
+
+/* effect-shine */
+
+.effect-shine {
+    -webkit-mask-image: linear-gradient(-75deg, rgba(0, 0, 0, .6) 30%, #000 50%, rgba(0, 0, 0, .6) 70%);
+    -webkit-mask-size: 200%;
+    animation: shine 2s infinite;
+}
+
+@-webkit-keyframes shine {
+    from {
+        -webkit-mask-position: 150%;
+    }
+    to {
+        -webkit-mask-position: -50%;
+    }
+}
+
+/* Customized checkbox*/
+
+.container-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+
+.container-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+
+.container-checkbox .checkmark {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+
+.container-checkbox:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+
+.container-checkbox input:checked~.checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.container-checkbox .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    border-radius: 50%;
+}
+
+/* Show the checkmark when checked */
+
+.container-checkbox input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+
+.container-checkbox .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* Customized radio button */
+
+.container-radio {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 17px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+
+.container-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+
+.container-radio .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+
+.container-radio:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+
+.container-radio input:checked~.checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+
+.container-radio .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+
+.container-radio input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+
+.container-radio .checkmark:after {
+    top: 6px;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}

@@ -1,0 +1,60 @@
+.content {
+    padding: 2rem 4% 1rem;
+}
+
+.authorDp {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 7px;
+}
+
+.authorName {
+    font-weight: bold;
+}
+
+.del-alert {
+    background-color: whitesmoke;
+    color: #ae3232;
+}
+
+.blogPhoto, .blogBody {
+    font-size: 1.3em;
+    width: 100%;
+}
+
+.card-title {
+    font-size: 3.4em;
+}
+
+.counter {
+    font-size: 1.2em;
+}
+
+.liked {
+    color: var(--shade-blue);
+}
+
+.likeBtn {
+    border: 1px solid var(--shade-blue);
+    width: 8rem;
+}
+
+.form-control {
+    border-radius: none;
+}
+
+.postCommentBtn {
+    font-weight: bold;
+    color: white;
+    border: 1px solid var(--shade-blue);
+}
+
+/* .postCommentBtn:hover, .likeBtn:hover, .liked:hover {
+    background-color: var(--shade-blue);
+    color: white;
+} */
+
+.submitContainer {
+    display: flex;
+    justify-content: flex-end;
+}

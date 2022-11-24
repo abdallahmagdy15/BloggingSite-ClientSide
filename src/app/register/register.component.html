@@ -1,0 +1,117 @@
+<div class="content mt-5 px-4 py-5 mx-auto ">
+
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm)" class="bg-transparent">
+        <div class="card card0" style="margin: 1% auto;">
+            <div>
+                <div class="card1" style="margin: 1% auto;">
+                    <div class="row justify-content-center my-auto">
+                        <div class="col-md-8 col-10 my-5">
+                            <h6 class="msg-info display-4">Sign Up</h6>
+                            <div class="form-group"> <label class="form-control-label ">First Name</label>
+                                <input type="text" formControlName="firstName" id="firstName"
+                                    placeholder="First Name"
+                                    [ngClass]="{ 'is-invalid': submitted && fieldget.firstName.errors }"
+                                    class="form-control">
+                                <div *ngIf="submitted && fieldget.firstName.errors" class="invalid-feedback">
+                                    <div *ngIf="fieldget.firstName.errors.required">First Name is required</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group"> <label class="form-control-label ">Last Name</label>
+                                <input type="text" formControlName="lastName" id="lastName"
+                                    placeholder="Last Name"
+                                    [ngClass]="{ 'is-invalid': submitted && fieldget.lastName.errors }"
+                                    class="form-control">
+                                <div *ngIf="submitted && fieldget.lastName.errors" class="invalid-feedback">
+                                    <div *ngIf="fieldget.lastName.errors.required">lastName is required</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group"> <label class="form-control-label ">User Name</label>
+                                <input type="text" formControlName="username" id="username"
+                                    placeholder="User Name"
+                                    [ngClass]="{ 'is-invalid': submitted && fieldget.username.errors }"
+                                    class="form-control">
+                                <div *ngIf="submitted && fieldget.username.errors" class="invalid-feedback">
+                                    <div *ngIf="fieldget.username.errors.required">username is required</div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="container-radio">Male
+                                    <input type="radio" checked="checked" formControlName="gender" value="male">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="container-radio">Female
+                                    <input type="radio" formControlName="gender" value="female">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <div *ngIf="submitted && fieldget.gender.errors" class="invalid-feedback">
+                                    <div *ngIf="fieldget.gender.errors.required">Gender is required</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group"> <label class="form-control-label ">Email</label>
+                                <input type="text" formControlName="email" id="email" placeholder="Email"
+                                    [ngClass]="{ 'is-invalid': submitted && fieldget.email.errors }"
+                                    class="form-control">
+                                <div *ngIf="submitted && fieldget.email.errors" class="invalid-feedback">
+                                    <div *ngIf="fieldget.email.errors.required">email is required</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group"> <label class="form-control-label ">Job Title</label>
+                                <input type="text" formControlName="jobTitle" id="jobtitle" 
+                                    placeholder="Job Title"
+                                    [ngClass]="{ 'is-invalid': submitted && fieldget.jobTitle.errors }"
+                                    class="form-control">
+                                <div *ngIf="submitted && fieldget.jobTitle.errors" class="invalid-feedback">
+                                    <div *ngIf="fieldget.jobTitle.errors.required">jobtitle is required</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group"> <label class="form-control-label ">Password</label>
+                                <input type="password" formControlName="password" id="password"
+                                    placeholder="Password"
+                                    [ngClass]="{ 'is-invalid': submitted && fieldget.password.errors }"
+                                    class="form-control">
+                                <div *ngIf="submitted && fieldget.password.errors" class="invalid-feedback">
+                                    <div *ngIf="fieldget.password.errors.required">password is required</div>
+                                    <div *ngIf="fieldget.password.errors.minlength">Password must be at least 6
+                                        characters</div>
+                                </div>
+                            </div>
+                            <div class="form-group"> <label class="form-control-label ">Confirm Password</label>
+                                <input type="password" formControlName="confirmPassword" id="cpassword"
+                                    placeholder="Confirm Password"
+                                    [ngClass]="{ 'is-invalid': submitted && fieldget.confirmPassword.errors }"
+                                    class="form-control">
+                                <div *ngIf="submitted && fieldget.confirmPassword.errors" class="invalid-feedback">
+                                    <div *ngIf="fieldget.confirmPassword.errors.required">Confirm Password is required</div>
+                                    <div *ngIf="fieldget.confirmPassword.errors.mustMatch">Password and Confirm Password don't match!</div>
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-center my-3 px-3"> <button [disabled]="loading"
+                                    type="submit" class="btn-block btn-color rgb-animation">
+                                    <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                                    Register</button> </div>
+
+                        </div>
+                        <div class="bottom text-center mb-5">
+                            <p [routerLink]="['/login']" routerLinkActive="router-link-active"
+                                class="sm-text mx-auto mb-3 lead">Already have an account?<button
+                                    class="btn btn-white ml-2">login</button></p>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+</div>

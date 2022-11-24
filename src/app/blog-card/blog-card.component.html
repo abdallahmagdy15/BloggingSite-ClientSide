@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 col-sm-5">
+            <a [routerLink]="['/blog-details/'+blog._id]" style="width: inherit;" >
+                <img [src]="(blog.photo)?blog.photo:'../assets/male_dp.jpg'" class="img-responsive" alt="pic">
+            </a>
+        </div>
+        <div class="col-md-7 col-sm-7">
+            <div class="blogContent">
+                <h3>
+                    <a [routerLink]="['/blog-details/'+blog._id]" class="title">
+                        <label class=" title">{{blog.title}}</label>
+                    </a>
+                </h3>
+            </div>
+            <div class="blogInfo">
+                <div class="btn">
+                    <img class="authorDp img-responsive" [src]="(blog.authorDp)?blog.authorDp:'../assets/male_dp.jpg'">
+                    <a class="btn authorName" [routerLink]="this.auth.isAuthenticated()?['/author/'+blog.author]:null">By {{blog.authorName}} • {{blog.updatedAt | date}} </a>
+                </div>
+
+                <a class="counter d-block ml-2">
+                    <fa-icon [icon]="faThumbsUp"></fa-icon>
+                    <span> {{(blog.likes)?blog.likes.length:'0'}}</span> Likes •
+                    <fa-icon [icon]="faComment"></fa-icon>
+                    <span> {{(blog.comments)?blog.comments.length:'0'}}</span> Comments
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,78 @@
+a:hover {
+    text-decoration: none;
+}
+
+.authorDp {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.nav-row {
+    width: 100%;
+    height: 4rem;
+    padding: 0 5%;
+}
+
+.navbar {
+    background-color: var(--shade-dark);
+}
+
+.logo {
+    width: 10rem;
+    margin-left: 2.2rem;
+    margin-top: 1rem;
+}
+
+nav.row {
+    margin-left: 0;
+}
+
+.nav-link {
+    color: var(--shade-grey);
+}
+
+.nav-link:hover, .searchBtn:hover {
+    color: white;
+}
+
+.nav-row:first-child > .col:last-child {
+    margin-top: .4rem;
+}
+
+.active {
+    color: white;
+}
+
+.searchBtn {
+    cursor: pointer;
+    color: var(--shade-grey);
+}
+
+.searchForm {}
+
+img {
+    width: 60px;
+    height: 80%;
+}
+
+.nav-container {
+    background-color: var(--shade-white);
+}
+.form-control{
+    background-color: var(--shade-dark);
+    color:white;
+    border:none;
+    box-shadow: none;
+    width: 100%;
+    height: 100%;
+    line-height: 100%;  
+}
+
+.form-control:focus{
+    border:none;
+    box-shadow: none;
+}
+
+.searchForm .form-group{
+    margin-top: 1rem;
+}

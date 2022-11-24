@@ -1,0 +1,17 @@
+<div class="authorCard">
+    <div class="d-inline-block dpCard">
+        <img class="authorDp" [src]="(author.dp)?author.dp:'../assets/male_dp.jpg'">
+    </div>
+    <div class="info d-inline-block">
+        <a class="dark font-weight-bold authorName" [routerLink]="['/author/'+author._id]">{{author.firstName+"
+            "+author.lastName}}</a>
+        <p class="jobTitle">{{author.jobTitle}}</p>
+        <p class="lead"><span>{{(author.followers)?author.followers.length:0}}</span>
+            Followers •
+            <span>{{(author.blogs)?author.blogs.length:0}}</span> Blogs
+        </p>
+    </div>
+    <div class="d-inline-block followCard">
+        <button class="btn" (click)="isFollowed?unfollow():follow()" [ngClass]="{followed: isFollowed}">{{isFollowed?'Following':'Follow'}}</button>
+    </div>
+</div>
